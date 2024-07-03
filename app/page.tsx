@@ -4,7 +4,18 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
-
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import { HomeCard } from "@/components/home/HomeCard";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { BadgeAlertIcon } from "lucide-react";
+import FeaturesGrid from "@/components/home/FeaturesGrid";
 
 export default function Home() {
   const reviews = [
@@ -114,26 +125,23 @@ export default function Home() {
           )}>An AP Prep Platform made <br></br> by <span className="font-black">Students</span> for <span className="font-black">Students</span>.</span>
         </h1>
         </AnimatedGradientText>
-        <p className="text-lg mt-8">
-        ❌ <span className="font-bold">Problem:</span> Students, including us, have a hard time staying focused and shifting their attention to what's most important on AP exams. 😞 
+        <p className="text-2xl mt-8">
+        ❌ <span className="font-bold">Problem:</span> Hard time staying focused and shifting attention to what's most important. 😞 
         </p>
-        <p className="text-lg mt-4">
-        🤷 <span className="font-bold">Other Platforms:</span> The minimal feedback and engagement of these other websites makes it hard for students to focus and actually learn about topics they struggle at. 🥺
+        <p className="text-2xl mt-4">
+        🤷 <span className="font-bold">Other Platforms:</span> Minimal feedback and engagement leads to less focus. 🥺
         </p>
-        <p className="text-lg mt-4 mb-8">
-        ✅ <span className="font-bold">Solution:</span> PrepAP, A platform where students can study, get feedback, take practice tests, and succeed on their exams! 🐐 
+        <p className="text-2xl mt-4 mb-8">
+        ✅ <span className="font-bold">Solution:</span> PrepAP: Study, get answers, practice, and ace the exam. 🐐 
         </p>
-        <Link
-            href="#"
-            className={buttonVariants({ variant: "default" })}
-          >
-            Start Prepping
-          </Link>
+        <ShimmerButton background="#16a34a">Start Prepping</ShimmerButton>
+      
       </section>
       <section className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
       <h1 className="font-extrabold text-center relative w-[max-content] text-5xl">
           Features
         </h1>
+        <FeaturesGrid></FeaturesGrid>
       </section>
     </main>
   );
