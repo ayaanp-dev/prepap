@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 export default function RootLayout({
   children,
@@ -9,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
       <ThemeProvider
@@ -21,5 +29,6 @@ export default function RootLayout({
         </ThemeProvider>
         </body>
     </html>
+    </ClerkProvider>
   );
 }

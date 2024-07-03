@@ -5,18 +5,18 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import { HomeCard } from "@/components/home/HomeCard";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { BadgeAlertIcon } from "lucide-react";
 import FeaturesGrid from "@/components/home/FeaturesGrid";
 import { Testimonial } from "@/components/home/Testimonial";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { SignIn } from "@clerk/nextjs";
 
 export default function Home() {
   const reviews = [
@@ -35,7 +35,7 @@ export default function Home() {
     {
       name: "Elon Musk",
       username: "@elonmxsk",
-      body: "Space exploration wouldn't be possible without PrepAP.",
+      body: "Space exploration would not be possible without PrepAP.",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg/640px-Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
     },
     {
@@ -47,7 +47,7 @@ export default function Home() {
     {
       name: "Stephen Curry",
       username: "@stephencurry30",
-      body: "My 3 point percentage wouldn't be so high without PrepAP.",
+      body: "My 3 point percentage would not be so high without PrepAP.",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Steph_Curry_P20230117AS-1347_%28cropped%29.jpg/640px-Steph_Curry_P20230117AS-1347_%28cropped%29.jpg"
     },
     {
@@ -118,7 +118,7 @@ export default function Home() {
   return (
     <main className="">
       <LandingNav></LandingNav>
-      <section className="mt-3 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
+      <section id="home" className="mt-3 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
         <AnimatedGradientText>
         <h1 className="font-extrabold text-center relative w-[max-content] text-7xl">
       <span className={cn(
@@ -127,7 +127,7 @@ export default function Home() {
         </h1>
         </AnimatedGradientText>
         <p className="text-2xl mt-8">
-        ❌ <span className="font-bold">Problem:</span> Hard time staying focused and shifting attention to what's most important. 😞 
+        ❌ <span className="font-bold">Problem:</span> Hard time staying focused and shifting attention to what&apos;s most important. 😞 
         </p>
         <p className="text-2xl mt-4">
         🤷 <span className="font-bold">Other Platforms:</span> Minimal feedback and engagement leads to less focus. 🥺
@@ -135,10 +135,15 @@ export default function Home() {
         <p className="text-2xl mt-4 mb-8">
         ✅ <span className="font-bold">Solution:</span> PrepAP: Study, get answers, practice, and ace the exam. 🐐 
         </p>
-        <ShimmerButton background="#16a34a">Start Prepping</ShimmerButton>
-      
+        <Dialog>
+  <DialogTrigger><ShimmerButton background="#16a34a">Start Prepping</ShimmerButton></DialogTrigger>
+  <DialogContent>
+  <SignIn />
+  </DialogContent>
+</Dialog>
+
       </section>
-      <section className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
+      <section id="features" className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
       <h1 className="font-extrabold text-center relative w-[max-content] text-5xl">
           Features
         </h1>

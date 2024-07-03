@@ -102,7 +102,7 @@ export function Testimonial() {
       };
     return (
         
-<section className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
+<section id="testimonials" className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
       <h1 className="font-extrabold text-center relative w-[max-content] text-5xl mb-8">
           Testimonials
         </h1>
