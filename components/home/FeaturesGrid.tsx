@@ -3,6 +3,10 @@ import { FAQ } from "./FAQ"
 import { CalendarCheck, Clock, AudioLines, BotMessageSquare, DollarSign, NotebookPen } from "lucide-react";
    
   import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
+  import Globe from "@/components/magicui/globe";
+  import NumberTicker from "@/components/magicui/number-ticker";
+import ClientTweetCard from "../magicui/client-tweet-card";
+
 
 const features = [
   {
@@ -36,7 +40,7 @@ const bento_features = [
     {
       Icon: Clock,
       name: "Practice timers",
-      description: "The time limits on the AP exam are an issue many students face. To combat this, we provide built-in timers for all practice materials so students not only learn the material, but also learn to manage their time.",
+      description: "The time limits on the AP exam are an issue many students face. To combat this, we provide built-in timers for all practice materials so students not only learn the material, but also get used to answering questions quickly. This is crucial to cracking the AP exam.",
       href: "/",
       cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
@@ -45,7 +49,7 @@ const bento_features = [
     {
       Icon: CalendarCheck,
       name: "Study Streaks",
-      description: "We use study streaks, similar to Duolingo, to keep students motivated.",
+      description: "Similar to Duolingo, we use study streaks so you can stay motivated.",
       href: "/",
       cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
@@ -58,22 +62,22 @@ const bento_features = [
       href: "/",
       cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+      className: "lg:col-start-3 lg:col-end-3 lg:row-start-3 lg:row-end-4",
     },
     {
       Icon: AudioLines,
       name: "Focus with Music",
       description:
-        "Students love music, and specific music has been shown to improve focus and increase attention. Thus, we have an AI music recommendation system designed specifically for focus, so students can maximize their study time.",
+        "Students love music and countless studies have proven that specific audio signals and music increase attention and focus. Therefore, we made an AI Music recommendation system catered to you so you can stay focused when studying for the AP exam.",
       href: "/",
       cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3",
     },
     {
         Icon: NotebookPen,
         name: "Past Exams",
-        description: "Our exam material comes straight from past CollegeBoard exams.",
+        description: "All our exam material comes straight from CollegeBoard so you can maximize your study time.",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
@@ -105,8 +109,10 @@ export default function FeaturesGrid() {
                 ))}
               </dl>
             </div>
+            {/* obviously change this tweet */}
+            <div className="mt-16"><FAQ></FAQ></div>
           </div>
-          <div className="ml-10">
+          <div className="ml-10 mt-5">
           <BentoGrid className="lg:grid-rows-3">
       {bento_features.map((bento_feature) => (
         <BentoCard key={bento_feature.name} {...bento_feature} />

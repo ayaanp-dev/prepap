@@ -4,10 +4,11 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+  import { Dot } from "lucide-react"
   
   export function FAQ() {
     return (
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full text-lg">
         <AccordionItem value="item-1">
           <AccordionTrigger>How do you keep students motivated?</AccordionTrigger>
           <AccordionContent>

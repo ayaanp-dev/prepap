@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card"
 import { BadgeAlertIcon } from "lucide-react";
 import FeaturesGrid from "@/components/home/FeaturesGrid";
+import { Testimonial } from "@/components/home/Testimonial";
 
 export default function Home() {
   const reviews = [
@@ -143,6 +144,7 @@ export default function Home() {
         </h1>
         <FeaturesGrid></FeaturesGrid>
       </section>
+      <Testimonial></Testimonial>
     </main>
   );
 }
