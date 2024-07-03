@@ -21,7 +21,7 @@ export function Testimonial() {
         {
           name: "Elon Musk",
           username: "@elonmxsk",
-          body: "Space exploration wouldn't be possible without PrepAP.",
+          body: "Space exploration would not be possible without PrepAP.",
           img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg/640px-Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
         },
         {
@@ -33,7 +33,7 @@ export function Testimonial() {
         {
           name: "Stephen Curry",
           username: "@stephencurry30",
-          body: "My 3 point percentage wouldn't be so high without PrepAP.",
+          body: "My 3 point percentage would not be so high without PrepAP.",
           img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Steph_Curry_P20230117AS-1347_%28cropped%29.jpg/640px-Steph_Curry_P20230117AS-1347_%28cropped%29.jpg"
         },
         {
