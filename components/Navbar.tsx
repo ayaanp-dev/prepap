@@ -24,7 +24,7 @@ import {
   } from "@/components/ui/navigation-menu"
 
 
-export function LandingNav() {
+export function Navbar() {
     return (
         <header className="sticky top-0 z-50 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
         <div className="flex justify-between items-center w-full">
@@ -41,7 +41,7 @@ export function LandingNav() {
               <NavigationMenuItem>
                   <Link href="#home" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      Home
+                      Dashboard
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>

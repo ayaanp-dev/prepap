@@ -135,12 +135,7 @@ export default function Home() {
         <p className="text-2xl mt-4 mb-8">
         ✅ <span className="font-bold">Solution:</span> PrepAP: Study, get answers, practice, and ace the exam. 🐐 
         </p>
-        <Dialog>
-  <DialogTrigger><ShimmerButton background="#16a34a">Start Prepping</ShimmerButton></DialogTrigger>
-  <DialogContent>
-  <SignIn />
-  </DialogContent>
-</Dialog>
+        <Link href="/sign-in"><ShimmerButton background="#16a34a">Start Prepping</ShimmerButton></Link>
 
       </section>
       <section id="features" className="mt-5 p-10 rounded-lg shadow-lg mx-auto flex flex-col items-center">
