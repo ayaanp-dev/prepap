@@ -9,7 +9,7 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/Footer";
 
 export default function RootLayout({
   children,
